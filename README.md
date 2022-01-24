@@ -1,5 +1,6 @@
 ### What it does
 This repo contain cfn templates for deploying aws codepipeline.
+In the simple folder, the cfn template create a custom webserver with sg and website. To run, simple upload the yaml to cloudformation. 
 
 ### What i learned
 - AWS CodePipeline
