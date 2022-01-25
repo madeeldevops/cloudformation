@@ -1,3 +1,4 @@
+Description: "Template for asg and all the good stuff"
 Parameters:
   myKeyPair:
     Description: Name of Existing EC2 Key Pair
@@ -82,13 +83,12 @@ Resources:
         - !Ref AWS::Region
         - AMI
       UserData:
-        'Fn::Base64': 
-          !Sub |
-            #!/bin/bash -xe                        
-            # Ensure AWS CFN Bootstrap is the latest
-            yum install -y aws-cfn-bootstrap
-            # Install the files and packages from the metadata
-            /opt/aws/bin/cfn-init -v --stack ${AWS::StackName} --resource LaunchConfiguration --region ${AWS::Region}
+        'Fn::Base64': !Sub |
+          #!/bin/bash -xe                        
+          # Ensure AWS CFN Bootstrap is the latest
+          yum install -y aws-cfn-bootstrap
+          # Install the files and packages from the metadata
+          /opt/aws/bin/cfn-init -v --stack ${AWS::StackName} --resource LaunchConfiguration --region ${AWS::Region}
   ALBSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
