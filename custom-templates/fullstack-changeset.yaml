@@ -65,7 +65,7 @@ Resources:
               php: []
           files: 
             /var/www/html/index.php:
-              content: !Sub |
+              content:
                 <?php print "Hello from another side!"; ?>
           services: 
             sysvinit:
