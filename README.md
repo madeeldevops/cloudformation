@@ -9,6 +9,6 @@ In the simple folder, the cfn template create a custom webserver with sg and web
 - EC2 & Security group
 
 ### How to Run?
-- Create service roles for awscodepipeline with custom inline policy and trust relationship
+- Create our own service roles for awscodepipeline (you can't create as trusted entity so you have to edit ec2 service role for it) with custom inline policy and trust relationship
 - Create another service role for cloudformation for s3fullaccess.
 - Create a pipeline.
