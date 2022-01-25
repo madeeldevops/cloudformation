@@ -6,6 +6,7 @@ In the simple folder, the cfn template create a custom webserver with sg and web
 - AWS CodePipeline
 - AWS CloudFormation
 - IAM
+- EC2 & Security group
 
 ### How to Run?
 - Create service roles for awscodepipeline with custom inline policy and trust relationship
